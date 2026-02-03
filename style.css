@@ -58,36 +58,32 @@ body{
 
  /* start navbar */
 
- .navbar .nav-link{
+.navbar .nav-link {
   position: relative;
 }
+
 .navbar .nav-link::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;          /* تحت النص */
-    width: 0;
-    height: 3px;
-    background-color: blueviolet;
-    transform: translateX(-50%);
-    transition: width 0.3s ease;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0; 
+  width: 0;
+  height: 3px;
+  background-color: blueviolet;
+  transform: translateX(-50%);
+  transition: width 0.3s ease, background-color 0.3s ease;
 }
 
-/* عند اللمس */
-.navbar .nav-link:hover::after {
-    width: 60%;
-}
-
-
-
-/* active */
-.navbar .nav-link.active {
-    color: #5a189a;
-    font-weight: 600;
-}
-
+.navbar .nav-link:hover::after,
+.navbar .nav-link:focus::after,
 .navbar .nav-link.active::after {
-    width: 0;
+  width: 60%;
+}
+
+/* Active link style */
+.navbar .nav-link.active {
+  color: #5a189a;
+  font-weight: 600;
 }
 
 /* End Navbar */
@@ -703,4 +699,5 @@ h2{
   .social-link:hover {
     color: #0dcaf0;        /* لون عند المرور */
   }
+
 /* End Footer */

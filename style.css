@@ -4,7 +4,9 @@ body{
     padding: 0;
 
 }
-
+body, html {
+    overflow-x: hidden;
+}
 
 
 
@@ -57,7 +59,6 @@ body{
 
 
  /* start navbar */
-
 .navbar .nav-link {
   position: relative;
 }
@@ -379,7 +380,9 @@ h2{
 .projects {
   background-color: #f8f9fa;
 }
-
+.project-card {
+  cursor: pointer;
+}
 .project-card img {
   transition: 0.5s ease;
 }
@@ -699,5 +702,4 @@ h2{
   .social-link:hover {
     color: #0dcaf0;        /* لون عند المرور */
   }
-
 /* End Footer */

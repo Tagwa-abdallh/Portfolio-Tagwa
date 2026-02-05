@@ -92,7 +92,7 @@
 
 
    <!-- Start Home --> 
-<div class="container-fluid bg-light  my-6 mx-auto hero-section py-5"  id= "Home">
+<div class="container-fluid bg-light ps-5 my-6 mx-auto hero-section py-5"  id= "Home">
   <div class="container">
     <div class="row align-items-center  ">
 
@@ -138,17 +138,13 @@
 
       <div class="modal-header border-0">
         <button type="button" class="btn-close btn-close-white ms-auto"
-                data-bs-dismiss="modal"></button>
+             data-bs-dismiss="modal">
+        </button>
       </div>
 
       <div class="modal-body p-0">
         <div class="ratio ratio-16x9">
-          <iframe
-            src="./portfolio.mp4"
-            title="Video"
-            allow="autoplay"
-            allowfullscreen>
-          </iframe>
+          <video id="videoPlayer" src="./portfolio.mp4" muted controls></video>
         </div>
       </div>
 

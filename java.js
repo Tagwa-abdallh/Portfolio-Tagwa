@@ -44,6 +44,21 @@ var typed = new Typed('.typing-text', {
   backSpeed: 60,
   backDelay: 1700,
   loop: true
+}); 
+const videoModal = document.getElementById('videoModal');
+const videoPlayer = document.getElementById('videoPlayer');
+
+// لما يفتح الـ Modal → شغّل الفيديو تلقائي
+videoModal.addEventListener('shown.bs.modal', function () {
+    videoPlayer.currentTime = 0; // يبدأ من البداية
+    videoPlayer.muted = true; // صامت عند البداية
+    videoPlayer.play();
+});
+
+// لما يقفل الـ Modal → وقف الفيديو فورًا
+videoModal.addEventListener('hidden.bs.modal', function () {
+    videoPlayer.pause();
+    videoPlayer.currentTime = 0; // ترجع البداية
 });
 
 
@@ -184,3 +199,4 @@ showTestimonial(index);
 
 
   
+
